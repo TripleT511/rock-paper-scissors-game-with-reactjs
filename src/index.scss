@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  background: radial-gradient(
+    circle at 50% 0%,
+    hsl(214, 47%, 23%),
+    hsl(237, 49%, 15%)
+  );
+  min-height: 100vh;
+  margin: auto;
+}
+
+.container {
+  max-width: 1440px;
+  margin: auto;
+  min-height: 100vh;
+  padding-top: 46px;
+}
+
+.main {
+  position: relative;
+  z-index: 0;
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-top: 30px;
+  }
+}

@@ -1,0 +1,38 @@
+@import "../../variables.scss";
+.game__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 480px;
+  margin: 168px auto 0;
+  &__button {
+    position: absolute;
+    width: 100%;
+    top: -99px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .game__wrapper {
+    width: 100%;
+    &__button {
+      gap: 90px;
+      top: -70px;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .game__wrapper {
+    &__button {
+      gap: 50px;
+      top: -40px;
+    }
+  }
+}

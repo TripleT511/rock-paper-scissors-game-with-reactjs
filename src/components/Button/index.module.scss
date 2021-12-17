@@ -1,0 +1,182 @@
+@import "../../variables.scss";
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 198px;
+  height: 198px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  &__img {
+    width: 154px;
+    height: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: $bg;
+    box-shadow: inset 0 7px 0 0 #b9bdd4;
+    img {
+      display: block;
+      transform: scale(1.4);
+    }
+  }
+  &:hover {
+    box-shadow: 0px 1px 20px 10px #f8f8f8;
+  }
+}
+
+.result.btn {
+  width: 294px;
+  height: 294px;
+  cursor: default;
+  animation: zoomBtn 0.3s ease;
+  will-change: opacity, transform;
+  .btn__img {
+    width: 228px;
+    height: 228px;
+    img {
+      transform: scale(2);
+    }
+  }
+}
+
+.active {
+  width: 294px;
+  height: 294px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 65px hsl(214deg 47% 23% / 100%),
+    0 0 0 135px hsl(214deg 47% 23% / 60%), 0 0 0 215px hsl(214deg 47% 23% / 40%);
+  animation: zoomBtn 0.3s ease;
+  will-change: opacity, transform;
+}
+
+@keyframes zoomBtn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.btn__rock {
+  background-image: linear-gradient($rock2, $rock);
+  box-shadow: 0 7px 0 0 #9f1536;
+}
+
+.btn__paper {
+  background-image: linear-gradient($paper2, $paper);
+  box-shadow: 0 7px 0 0 #2844c1;
+}
+
+.btn__scissors {
+  background-image: linear-gradient($scissors2, $scissors);
+  box-shadow: 0 7px 0 0 #c76d1c;
+}
+
+@media screen and (max-width: 992px) {
+  .btn {
+    width: 180px;
+    height: 180px;
+    &__img {
+      width: 140px;
+      height: 140px;
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .result.btn {
+    width: 230px;
+    height: 230px;
+    cursor: default;
+    animation: zoomBtn 0.3s ease;
+    will-change: opacity, transform;
+    .btn__img {
+      width: 170px;
+      height: 170px;
+      img {
+        transform: scale(1.5);
+      }
+    }
+  }
+  .active {
+    width: 230px;
+    height: 230px;
+    box-shadow: 0 0 0 45px hsl(214deg 47% 23% / 100%),
+      0 0 0 100px hsl(214deg 47% 23% / 60%),
+      0 0 0 160px hsl(214deg 47% 23% / 40%);
+    z-index: -1;
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn {
+    width: 195px;
+    height: 195px;
+    &__img {
+      width: 140px;
+      height: 140px;
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .result.btn {
+    width: 195px;
+    height: 195px;
+    .btn__img {
+      width: 140px;
+      height: 140px;
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .active {
+    width: 195px;
+    height: 195px;
+    box-shadow: 0 0 0 45px hsl(214deg 47% 23% / 100%),
+      0 0 0 100px hsl(214deg 47% 23% / 60%),
+      0 0 0 160px hsl(214deg 47% 23% / 40%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn {
+    width: 130px;
+    height: 130px;
+    &__img {
+      width: 100px;
+      height: 100px;
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .result.btn {
+    width: 130px;
+    height: 130px;
+    .btn__img {
+      width: 100px;
+      height: 100px;
+      img {
+        transform: scale(1);
+      }
+    }
+  }
+  .active {
+    width: 130px;
+    height: 130px;
+    box-shadow: 0 0 0 20px hsl(214deg 47% 23% / 100%),
+      0 0 0 45px hsl(214deg 47% 23% / 60%), 0 0 0 80px hsl(214deg 47% 23% / 40%);
+  }
+}

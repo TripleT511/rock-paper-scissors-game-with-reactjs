@@ -1,0 +1,152 @@
+@import "../../variables.scss";
+.rulesBtn {
+  position: relative;
+  width: 126px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 37px;
+  border: 2px solid hsla(0, 0%, 77%, 1);
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: 33px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  &:hover {
+    background: #f8f8f8;
+    border: none;
+    p {
+      color: $dark;
+    }
+  }
+  p {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: calc(20.4 / 17);
+    letter-spacing: 2px;
+    color: #f8f8f8;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsla(0, 0, 0, 50%);
+  z-index: 1000;
+  &__rules {
+    display: flex;
+    flex-direction: column;
+    background: #f8f8f8;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 30px 30px;
+    border-radius: 10px;
+    animation: zoomIn 0.3s ease;
+    will-change: opacity, transform;
+    &__title {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 45px;
+      p {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: calc(38.4 / 32);
+        color: $dark;
+      }
+      div {
+        margin: -10px -10px -10px 0;
+        padding: 10px;
+        cursor: pointer;
+        img {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .rulesBtn {
+    position: relative;
+    margin: 185px auto 0;
+  }
+  .overlay {
+    background: #f8f8f8;
+    &__rules {
+      width: 100%;
+      margin: 0 35px;
+      padding: 0;
+      &__title {
+        margin-bottom: 80px;
+        justify-content: center;
+        div {
+          position: absolute;
+          bottom: -50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      &__img {
+        width: 100%;
+        img {
+          width: 60%;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .rulesBtn {
+    margin: 295px auto 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .rulesBtn {
+    position: relative;
+    margin: 135px auto 55px;
+  }
+  .play {
+    margin-top: 255px;
+  }
+  .overlay {
+    &__rules {
+      &__title {
+        margin-bottom: 115px;
+        div {
+          bottom: -80px;
+        }
+      }
+      &__img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "../../variables.scss";
+.result__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 942px;
+  margin: 0 auto 30px;
+  z-index: 0;
+  &__center {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
+    span {
+      font-weight: 700;
+      font-size: 60px;
+      line-height: calc(72 / 60);
+      color: #f8f8f8;
+    }
+    &__again {
+      padding: 15px 60px;
+      text-align: center;
+      background: #e8e8e8;
+      border-radius: 10px;
+      margin-top: 14px;
+      cursor: pointer;
+
+      p {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: calc(19.2 / 16);
+        letter-spacing: 3px;
+        color: $header;
+        transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        -webkit-transition: all 0.3s ease;
+      }
+      &:hover {
+        p {
+          color: $rock;
+        }
+      }
+    }
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__left,
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      position: relative;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: calc(28.8 / 24);
+      letter-spacing: 3px;
+      color: #f8f8f8;
+      margin-bottom: 62px;
+      z-index: 10;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .result__wrapper {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    gap: 180px;
+    &__center {
+      position: absolute;
+      top: 100%;
+    }
+    &__left,
+    &__right {
+      display: flex;
+      flex-direction: column-reverse;
+      p {
+        margin-top: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .result__wrapper {
+    margin-top: 95px;
+    gap: 120px;
+    &__center {
+      top: 140%;
+      &__again {
+        margin-top: 15px;
+      }
+      span {
+        font-size: 57px;
+      }
+    }
+    &__left,
+    &__right {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .result__wrapper {
+    gap: 40px;
+    &__left {
+      margin-left: 15px;
+    }
+  }
+}
